@@ -52,8 +52,8 @@ def visualize(data, cols_plot):
     elif t == 'scatter':
         scatter(data, cols_plot)
     else:
-        axes = data[numeric_data].plot(kind=type, figsize=(11, 9), subplots=True)
-        data[string_data].apply(pd.value_counts).plot(kind=type, figsize=(11, 9), subplots=True)
+        axes = data[numeric_data].plot(kind=t, figsize=(11, 9), subplots=True)
+        data[string_data].apply(pd.value_counts).plot(kind=t, figsize=(11, 9), subplots=True)
         if t == 'kde':
             for ax in axes:
                 ax.set_ylabel('density')
